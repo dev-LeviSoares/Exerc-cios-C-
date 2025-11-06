@@ -1,0 +1,14 @@
+D:\Visual Studio\C#\PixelPlay\PixelPlay\obj\Debug\net8.0\PixelPlay.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio\C#\PixelPlay\PixelPlay\obj\Debug\net8.0\PixelPlay.AssemblyInfoInputs.cache
+D:\Visual Studio\C#\PixelPlay\PixelPlay\obj\Debug\net8.0\PixelPlay.AssemblyInfo.cs
+D:\Visual Studio\C#\PixelPlay\PixelPlay\obj\Debug\net8.0\PixelPlay.csproj.CoreCompileInputs.cache
+D:\Visual Studio\C#\PixelPlay\PixelPlay\bin\Debug\net8.0\PixelPlay.exe
+D:\Visual Studio\C#\PixelPlay\PixelPlay\bin\Debug\net8.0\PixelPlay.deps.json
+D:\Visual Studio\C#\PixelPlay\PixelPlay\bin\Debug\net8.0\PixelPlay.runtimeconfig.json
+D:\Visual Studio\C#\PixelPlay\PixelPlay\bin\Debug\net8.0\PixelPlay.dll
+D:\Visual Studio\C#\PixelPlay\PixelPlay\bin\Debug\net8.0\PixelPlay.pdb
+D:\Visual Studio\C#\PixelPlay\PixelPlay\obj\Debug\net8.0\PixelPlay.dll
+D:\Visual Studio\C#\PixelPlay\PixelPlay\obj\Debug\net8.0\refint\PixelPlay.dll
+D:\Visual Studio\C#\PixelPlay\PixelPlay\obj\Debug\net8.0\PixelPlay.pdb
+D:\Visual Studio\C#\PixelPlay\PixelPlay\obj\Debug\net8.0\PixelPlay.genruntimeconfig.cache
+D:\Visual Studio\C#\PixelPlay\PixelPlay\obj\Debug\net8.0\ref\PixelPlay.dll

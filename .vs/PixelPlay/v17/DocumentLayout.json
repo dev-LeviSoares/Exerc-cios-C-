@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Visual Studio\\C#\\PixelPlay\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{347CD7E9-268E-42A9-B640-7A885F4B20F7}|PixelPlay\\PixelPlay.csproj|d:\\visual studio\\c#\\pixelplay\\pixelplay\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{347CD7E9-268E-42A9-B640-7A885F4B20F7}|PixelPlay\\PixelPlay.csproj|solutionrelative:pixelplay\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Visual Studio\\C#\\PixelPlay\\PixelPlay\\Program.cs",
+              "RelativeDocumentMoniker": "PixelPlay\\Program.cs",
+              "ToolTip": "D:\\Visual Studio\\C#\\PixelPlay\\PixelPlay\\Program.cs",
+              "RelativeToolTip": "PixelPlay\\Program.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAQwGIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T23:57:10.107Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

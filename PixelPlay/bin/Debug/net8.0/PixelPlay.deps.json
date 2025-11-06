@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "PixelPlay/1.0.0": {
+        "runtime": {
+          "PixelPlay.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PixelPlay/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
