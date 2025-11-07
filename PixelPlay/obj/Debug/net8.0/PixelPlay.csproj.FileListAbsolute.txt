@@ -12,3 +12,4 @@ D:\Visual Studio\C#\PixelPlay\PixelPlay\obj\Debug\net8.0\refint\PixelPlay.dll
 D:\Visual Studio\C#\PixelPlay\PixelPlay\obj\Debug\net8.0\PixelPlay.pdb
 D:\Visual Studio\C#\PixelPlay\PixelPlay\obj\Debug\net8.0\PixelPlay.genruntimeconfig.cache
 D:\Visual Studio\C#\PixelPlay\PixelPlay\obj\Debug\net8.0\ref\PixelPlay.dll
+D:\Visual Studio\C#\PixelPlay\PixelPlay\obj\Debug\net8.0\PixelPlay.sourcelink.json

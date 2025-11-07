@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PixelPlay")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a634c0a3a7a33e60d8784355d270cc668a31d3dc")]
 [assembly: System.Reflection.AssemblyProductAttribute("PixelPlay")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PixelPlay")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
