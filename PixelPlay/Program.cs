@@ -32,6 +32,8 @@ string[] cpfsClientes = new string[limiteCadastro];
 string[] telefonesClientes = new string[limiteCadastro];
 string[] emailsClientes = new string[limiteCadastro];
 
+int totalClientes = 0;
+
 // Variáveis de itens:
 List<long> codigoItem = new List<long>();
 List<string> tituloItem = new List<string>();
@@ -40,10 +42,11 @@ List<string> generoItem = new List<string>();
 List<double> valorDiaria = new List<double>();
 List<bool> status = new List<bool>();
 
+List<double> locacaoValores = new List<double>();
 
 //==================================================================
 
-void cadastrarClientes()
+/*void cadastrarClientes()
 {
     Console.Clear();
     Console.WriteLine("=====================");
@@ -141,7 +144,111 @@ void cadastrarClientes()
 
     break; // Jeito de burlar o for para ele não rodar o limite de cadastro.
     }
+}*/
+
+void cadastrarClientes()
+{
+    Console.Clear();
+    Console.WriteLine("=====================");
+    Console.WriteLine("===== PixelPlay =====");
+    Console.WriteLine("=====================");
+    Console.WriteLine("Cadastro de Clientes");
+    Console.WriteLine("=====================");
+
+    if (totalClientes >= limiteCadastro)
+    {
+        Console.WriteLine("Limite máximo de cadastros atingido!");
+        Console.ReadKey();
+        return; //Fecha quando atinge o máximo de clientes
+    }
+
+    int i = totalClientes; // Posição correta no array. Vai atualizando sempre que cadastrar um usuario
+
+    Console.WriteLine("----------------------");
+    Console.WriteLine("Digite o nome do novo cliente:");
+    nomesClientes[i] = Console.ReadLine();
+    while (string.IsNullOrWhiteSpace(nomesClientes[i])) //Verificador de espaço em branco
+    {
+        Console.WriteLine("Campo vazio. Por favor adicione o nome do usuário!");
+        nomesClientes[i] = Console.ReadLine();
+    }
+    
+    //==================================================================
+
+    Console.WriteLine("----------------------");
+    Console.WriteLine("Digite o CPF do novo cliente:");
+    cpfsClientes[i] = Console.ReadLine();
+
+    while (string.IsNullOrWhiteSpace(cpfsClientes[i]))
+    {
+        Console.WriteLine("Campo vazio. Por favor adicione o CPF do usuário!");
+        cpfsClientes[i] = Console.ReadLine();
+    }
+
+    // Verificador de CPF duplicado
+    bool cpfDuplicado = false;
+    for (int j = 0; j < totalClientes; j++)
+    {
+        if (cpfsClientes[j] == cpfsClientes[i])
+        {
+            cpfDuplicado = true;
+            break;
+        }
+    }
+
+    while (cpfDuplicado)
+    {
+        Console.WriteLine("Esse CPF já foi cadastrado. Digite outro CPF:");
+        cpfsClientes[i] = Console.ReadLine();
+
+        cpfDuplicado = false;
+        for (int j = 0; j < totalClientes; j++)
+        {
+            if (cpfsClientes[j] == cpfsClientes[i])
+            {
+                cpfDuplicado = true;
+                break;
+            }
+        }
+    }
+
+
+    //==================================================================
+
+    Console.WriteLine("----------------------");
+    Console.WriteLine("Digite o telefone do novo cliente:");
+    telefonesClientes[i] = Console.ReadLine();
+    while (string.IsNullOrWhiteSpace(telefonesClientes[i]))
+    {
+        Console.WriteLine("Campo vazio. Por favor adicione o telefone do usuário!");
+        telefonesClientes[i] = Console.ReadLine();
+    }
+
+    //==================================================================
+
+    Console.WriteLine("----------------------");
+    Console.WriteLine("Digite o email do novo cliente:");
+    emailsClientes[i] = Console.ReadLine();
+    while (string.IsNullOrWhiteSpace(emailsClientes[i]))
+    {
+        Console.WriteLine("Campo vazio. Por favor adicione o email do usuário!");
+        emailsClientes[i] = Console.ReadLine();
+    }
+
+    totalClientes++; // Avança o contador de clientes cadastrados
+    Console.WriteLine("Cliente cadastrado com sucesso!");
+    
+    Console.WriteLine("====================");
+    
+    Console.WriteLine("Resumo dos clientes cadastrados:");
+    for (int j = 0; j < totalClientes; j++)
+    {
+        Console.WriteLine($"[{j + 1}°] {nomesClientes[j]} - CPF: {cpfsClientes[j]}");
+    }
+    Console.ReadKey();
 }
+
+
 
 void cadastrarItens()
 {
@@ -207,21 +314,72 @@ void realizarLocação()
     Console.WriteLine("=====================");
 
     Console.WriteLine("Digite o CPF do usuário que irá locar o filme/jogo:");
-    string cpfProcurado = Console.ReadLine();
-    Console.WriteLine($"Võcê digitou {cpfProcurado}");
+    string cpfProcurado = Console.ReadLine().Trim();
    
     int indice = Array.IndexOf(cpfsClientes, cpfProcurado); //(Array que esta armazenado, valor que será caçado)
-    Console.WriteLine($"Võcê digitou {cpfProcurado}");
+    Console.WriteLine($"Você digitou {cpfProcurado}");
+    
     if(indice != -1)
     {
-        Console.WriteLine(nomesClientes[indice]);
+        Console.WriteLine($"Cliente: " +
+            $"{nomesClientes[indice]}");
     }
     else
     {
         Console.WriteLine("CPF não encontrado.");
     }
+
+    Console.WriteLine("Lista com filmes/jogos disponíveis:");
+    for(int i = 0; i < tituloItem.Count; i++)
+    {
+        if (status[i] == true)
+        {
+            Console.WriteLine($"{i + 1}° {tituloItem[i]} -  Valor da diária R$ {valorDiaria[i]}");
+        }
+    }
     
+    Console.WriteLine("Digite o nome do filme/jogo que irá locar:");
+    string item = Console.ReadLine();
+
+    int ind = tituloItem.IndexOf(item); //Busca indice referente ao item digitado
+    Console.WriteLine($"Você digitou: {item}");
     
+    if (ind != -1)
+    {
+        Console.WriteLine($"Código do item: {codigoItem[ind]}");
+    }
+    else
+    {
+        Console.WriteLine("Item não encontrado.");
+    }
+
+    Console.WriteLine("Você quer alugar por quantos dias?");
+    int diasAluguel = int.Parse(Console.ReadLine());
+
+    double valorTotal;
+
+    valorTotal = valorDiaria[ind] * diasAluguel;
+
+    Console.WriteLine("Você confirma a locação desse item? (S/N)");
+    string confirmacao = Console.ReadLine();
+
+    if (confirmacao.ToUpper() == "S")
+    {
+        status[ind] = false;
+        locacaoValores.Add(valorTotal);
+        Console.WriteLine("Locação realizada com sucesso!");
+        Console.WriteLine($"Cliente: {nomesClientes[indice]}");
+        Console.WriteLine($"Item: {tituloItem[ind]}");
+        Console.WriteLine($"Dias: {diasAluguel}");
+        Console.WriteLine($"Valor total: R$ {valorTotal:F2}");
+        Console.WriteLine($"Data da locação: {DateTime.Now}");
+    }
+    else
+    {
+        Console.WriteLine("Voltando ao menu...");
+    }
+    Console.ReadKey();
+
 }
 
 void exibirMenu()
